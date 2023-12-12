@@ -6,13 +6,12 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:26:21 by fbock             #+#    #+#              #
-#    Updated: 2023/12/12 12:49:40 by fbock            ###   ########.fr        #
+#    Updated: 2023/12/12 14:18:59 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME := ex01
 NAME := megaphone
 SRCS := src/megaphone.cpp
 

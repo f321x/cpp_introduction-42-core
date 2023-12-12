@@ -6,15 +6,14 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:59:44 by fbock             #+#    #+#              #
-#    Updated: 2023/12/12 12:59:58 by fbock            ###   ########.fr        #
+#    Updated: 2023/12/12 14:19:05 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME := ex01
-NAME := megaphone
-SRCS := src/megaphone.cpp
+NAME :=
+SRCS := src/
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
