@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 12:45:28 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/12 19:11:56 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2023/12/12 14:38:05 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2023/12/12 20:41:54 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-int	main(int argc, char **argv)
+int main(void)
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
+	std::string command;
+
+	std::cout << "Shitty phonebook V0.1" << std::endl;
+	std::cout << "You can ADD, SEARCH or EXIT." << std::endl;
+	while (1)
 	{
-		for (int i = 1; i < argc; i++) {
-			std::string arg = argv[i];
-			std::transform(arg.begin(), arg.end(), arg.begin(), ::toupper);
-			std::cout << arg;
-		}
-		std::cout << std::endl;
+		std::cin >> command;
+
 	}
 }

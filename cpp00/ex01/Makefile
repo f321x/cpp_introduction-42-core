@@ -6,15 +6,14 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:59:44 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2023/12/12 12:59:58 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2023/12/12 14:19:05 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME := ex01
-NAME := megaphone
-SRCS := src/megaphone.cpp
+NAME :=
+SRCS := src/
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
