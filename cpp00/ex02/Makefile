@@ -6,15 +6,15 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:59:44 by fbock             #+#    #+#              #
-#    Updated: 2023/12/13 13:14:14 by fbock            ###   ########.fr        #
+#    Updated: 2023/12/13 15:13:27 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME := phonebook_1998
+NAME :=
 INCLUDES := -I./include
-SRCS := src/Contact.cpp src/main.cpp src/PhoneBook.cpp
+SRCS := src/
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
