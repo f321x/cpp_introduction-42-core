@@ -6,17 +6,16 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:38:46 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/12 20:51:49 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2023/12/13 12:14:23 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "awesome_pb.hpp"
+#include <iostream>
 
 class Contact {
-
-	private:
+	public:
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;
