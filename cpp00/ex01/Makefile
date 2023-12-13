@@ -6,15 +6,15 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:59:44 by fbock             #+#    #+#              #
-#    Updated: 2023/12/13 19:46:33 by fbock            ###   ########.fr        #
+#    Updated: 2023/12/13 19:58:02 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	mini_bank
+NAME :=	phonebook1998
 INCLUDES := -I./include
-SRCS := src/tests.cpp src/Account.cpp
+SRCS := src/main.cpp src/PhoneBook.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
