@@ -6,7 +6,7 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 20:01:01 by fbock             #+#    #+#              #
-#    Updated: 2023/12/15 15:03:50 by fbock            ###   ########.fr        #
+#    Updated: 2023/12/15 15:35:33 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	zombies
 INCLUDES := -I./include
-SRCS := src/main.cpp src/Zombie.cpp src/randomChump.cpp src/newZombie.cpp
+SRCS := src/main.cpp src/Zombie.cpp src/newZombie.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

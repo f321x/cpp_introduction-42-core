@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/14 15:30:35 by fbock             #+#    #+#             */
-/*   Updated: 2023/12/15 14:56:54 by fbock            ###   ########.fr       */
+/*   Created: 2023/12/14 14:42:59 by fbock             #+#    #+#             */
+/*   Updated: 2023/12/15 16:09:30 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "horde.hpp"
+#include "Zombie.hpp"
 
-void	randomChump(std::string name)
-{
-	Zombie new_zombie(name);
-	new_zombie.announce();
+Zombie::Zombie(void) {}
+
+Zombie::~Zombie(void) {
+	std::cout << _name << " died" << std::endl;
 }
+
+void	Zombie::announce(void)
+{
+	std::cout << _name << ":  BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void	Zombie::setName(std::string arg_name)
+{
+	_name = arg_name;
+}
+
