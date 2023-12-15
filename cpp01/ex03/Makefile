@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/13 20:01:01 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2023/12/15 15:03:50 by ***REMOVED***            ###   ########.fr        #
+#    Created: 2023/12/15 16:44:40 by ***REMOVED***             #+#    #+#              #
+#    Updated: 2023/12/15 16:44:52 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	zombies
-INCLUDES := -I./include
-SRCS := src/main.cpp src/Zombie.cpp src/randomChump.cpp src/newZombie.cpp
+NAME :=	hi_this_is_brains
+INCLUDES :=
+SRCS := src/main.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   horde.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/14 14:42:59 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/15 14:53:50 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2023/12/15 14:56:33 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2023/12/15 14:57:46 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string arg_name) : name(arg_name) { }
-
-Zombie::~Zombie(void) {
-	std::cout << name << " died" << std::endl;
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << name << ":  BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
+Zombie *newZombie(std::string name);
+void	randomChump(std::string name);

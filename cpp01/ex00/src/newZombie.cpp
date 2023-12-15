@@ -6,14 +6,15 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 15:30:45 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/14 15:40:48 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:56:47 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "horde.hpp"
 
 Zombie *newZombie(std::string name)
 {
-	Zombie* new_zombie = new Zombie("Foo");
-	Zombie.announce();
+	Zombie* new_zombie = new Zombie(name);
+	new_zombie->announce();
+	return (new_zombie);
 }
