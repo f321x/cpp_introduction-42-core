@@ -6,15 +6,15 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/15 16:44:40 by fbock             #+#    #+#              #
-#    Updated: 2023/12/18 12:29:52 by fbock            ###   ########.fr        #
+#    Updated: 2024/01/17 14:18:35 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	violence
+NAME :=	harl
 INCLUDES := -I./include
-SRCS := src/main.cpp src/HumanA.cpp src/HumanB.cpp src/Weapon.cpp
+SRCS := src/main.cpp src/harl.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

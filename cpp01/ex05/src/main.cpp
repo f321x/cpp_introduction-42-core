@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 20:35:40 by fbock             #+#    #+#             */
-/*   Updated: 2023/12/18 10:33:00 by fbock            ###   ########.fr       */
+/*   Created: 2024/01/17 13:43:05 by fbock             #+#    #+#             */
+/*   Updated: 2024/01/17 14:18:06 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "main.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
-
-class HumanA
+int main(void)
 {
-	public:
-		HumanA(std::string name, Weapon& weapon);
-		void	attack(void);
-	private:
-		std::string _name;
-		Weapon&		_weapon;
-};
+	Harl harl;
+
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("info");
+	harl.complain("");
+	harl.complain("hello");
+	harl.complain("b9999");
+	return (0);
+}
