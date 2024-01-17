@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
+#    By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/15 16:44:40 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/01/17 14:18:35 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/01/17 14:11:23 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	harl
+NAME :=	Harl
 INCLUDES := -I./include
-SRCS := src/main.cpp src/harl.cpp
+SRCS := src/main.cpp src/Harl.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

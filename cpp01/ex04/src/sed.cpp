@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sed.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:40:14 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/17 13:40:29 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/17 14:09:38 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 bool	Sed::_open_files (std::string filename)
 {
-	_in_fs.open(filename);
+	_in_fs.open(filename.c_str());
 	if (_in_fs.is_open())
 	{
-		_out_fs.open(filename + ".replace", std::ios::out);
+		_out_fs.open((filename + ".replace").c_str(), std::ios::out);
 		if (_out_fs.is_open())
 			return (true);
 	}
