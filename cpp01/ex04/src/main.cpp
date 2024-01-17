@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 20:35:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/18 10:33:00 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/01/16 19:30:16 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/01/17 13:22:32 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "main.hpp"
 
-#include <iostream>
-#include "Weapon.hpp"
-
-class HumanA
+bool    check_if_valid(int argc)
 {
-	public:
-		HumanA(std::string name, Weapon& weapon);
-		void	attack(void);
-	private:
-		std::string _name;
-		Weapon&		_weapon;
-};
+    if (argc != 4)
+        return (false);
+    return (true);
+}
+
+int main(int argc, char **argv)
+{
+    if (!check_if_valid(argc))
+    {
+        std::cerr << "Invalid input. Try again!" << std::endl;
+        return (1);
+    }
+    Sed sed_obj(argv[1]);
+    sed_obj.replace_and_export(argv[2], argv[3]);
+    return (0);
+}

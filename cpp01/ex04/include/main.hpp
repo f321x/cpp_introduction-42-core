@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 20:35:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/18 10:33:00 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/01/17 10:49:37 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/01/17 14:52:45 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include <fstream>
 #include <iostream>
-#include "Weapon.hpp"
+#include <map>
+#include "Harl.hpp"
 
-class HumanA
-{
-	public:
-		HumanA(std::string name, Weapon& weapon);
-		void	attack(void);
-	private:
-		std::string _name;
-		Weapon&		_weapon;
-};

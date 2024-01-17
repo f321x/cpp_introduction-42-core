@@ -6,15 +6,15 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/15 16:44:40 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2023/12/18 12:29:52 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/01/17 13:20:45 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	violence
+NAME :=	sed++
 INCLUDES := -I./include
-SRCS := src/main.cpp src/HumanA.cpp src/HumanB.cpp src/Weapon.cpp
+SRCS := src/main.cpp src/sed.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

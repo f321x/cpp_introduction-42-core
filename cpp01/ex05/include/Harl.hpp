@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 20:35:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2023/12/18 10:33:00 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/01/17 13:52:34 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/01/17 14:18:48 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "Weapon.hpp"
+#include <map>
 
-class HumanA
+class	Harl
 {
 	public:
-		HumanA(std::string name, Weapon& weapon);
-		void	attack(void);
+		Harl(void);
+		~Harl(void);
+		void	complain(std::string level);
+
 	private:
-		std::string _name;
-		Weapon&		_weapon;
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 };
