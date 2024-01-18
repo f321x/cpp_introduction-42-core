@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   harl.hpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:52:34 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/17 14:18:48 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/18 13:39:44 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <map>
 
 class	Harl
 {
@@ -21,8 +20,10 @@ class	Harl
 		Harl(void);
 		~Harl(void);
 		void	complain(std::string level);
+		void	filter(std::string level);
 
 	private:
+		typedef void (Harl::*FunctionPointer)();
 		void	debug(void);
 		void	info(void);
 		void	warning(void);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   harl.cpp                                           :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:52:27 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/17 14:32:36 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/18 13:20:45 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,16 @@ void	Harl::error (void)
 
 void	Harl::complain(std::string level)
 {
-	std::map<std::string, void (Harl::*)()> function_map;
-	function_map["DEBUG"] = &Harl::debug;
-	function_map["INFO"] = &Harl::info;
-	function_map["WARNING"] = &Harl::warning;
-	function_map["ERROR"] = &Harl::error;
+	FunctionPointer funcs[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string		func_names[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-    std::map<std::string, void (Harl::*)()>::iterator i = function_map.find(level);
-    if (i != function_map.end())
+	for (int i = 0; i < 4; i++)
 	{
-        (this->*(i->second))();
-    }
-	else
-	{
-        std::cout << "Invalid debug level: " << level << std::endl;
-    }
+		if (func_names[i] == level)
+		{
+			(this->*funcs[i])();
+			return ;
+		}
+	}
+	std::cerr << "Invalid logging level!" << std::endl;
 }

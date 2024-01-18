@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sed.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
+/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:40:14 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/17 14:09:38 by codespace        ###   ########.fr       */
+/*   Updated: 2024/01/18 12:40:33 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,17 @@ void	Sed::replace_and_export (std::string s1, std::string s2)
 	length = s1.length();
 	while (getline(_in_fs, current_line))
 	{
-		while (1 && !s1.empty() && !s2.empty() && s1 != s2)
+		position = 0;
+		while (!s1.empty() && !s2.empty() && s1 != s2)
         {
-            position = current_line.find(s1);
+            position = current_line.find(s1, position);
             if (position != std::string::npos)
+			{
                 current_line = current_line.substr(0, position) +
 				s2 + current_line.substr(position + length);
-            else
+				position += s2.length();
+			}
+			else
                 break;
         }
 		_out_fs << current_line << "\n";

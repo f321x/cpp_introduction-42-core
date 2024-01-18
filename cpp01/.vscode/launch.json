@@ -1,0 +1,17 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "cppdbg",
+            "program": "${workspaceFolder}/ex04/a.out",
+            "args": ["ex04/tests/test", "ha", "hallo"],
+            "cwd": "${workspaceFolder}",
+            "request": "launch",
+            "MIMode": "lldb"
+        }
+    ]
+}
