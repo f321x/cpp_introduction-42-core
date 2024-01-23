@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:39:04 by fbock             #+#    #+#             */
-/*   Updated: 2024/01/22 14:39:20 by fbock            ###   ########.fr       */
+/*   Updated: 2024/01/23 13:46:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <Fixed.hpp>
+#include "Fixed.hpp"
+#include "Point.hpp"
+
+bool	bsp(Point const a, Point const b, Point const c, Point const point);

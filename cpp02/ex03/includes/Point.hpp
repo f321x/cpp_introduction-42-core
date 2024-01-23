@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:28:50 by fbock             #+#    #+#             */
-/*   Updated: 2024/01/23 14:12:02 by fbock            ###   ########.fr       */
+/*   Updated: 2024/01/23 13:59:10 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class	Point {
 		Point(const Point& other);
 		Point& operator=(const Point& other);
 
-		const	Fixed&	get_x(void);
-		const	Fixed&	get_y(void);
+		const Fixed&	get_x(void) const;
+		const Fixed&	get_y(void) const;
 
 	private:
 		const Fixed _x;
