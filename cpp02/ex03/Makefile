@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
+#    By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 14:26:28 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/01/23 11:28:08 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/01/23 13:50:25 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	triangles_TRIANGLES_trIAangleS
 INCLUDES := -I./includes
-SRCS := src/main.cpp src/Fixed.cpp
+SRCS := src/main.cpp src/Fixed.cpp src/Point.cpp src/bsp.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)

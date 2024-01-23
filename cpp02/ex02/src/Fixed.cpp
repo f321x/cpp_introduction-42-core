@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 10:28:33 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/23 11:15:29 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/23 14:13:19 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Fixed::Fixed (const int number) {
 }
 
 Fixed::Fixed (const float number) {
-	_fp_num_val = std::roundf(number * (1 << _FRACTIONAL_BITS));
+	_fp_num_val = roundf(number * (1 << _FRACTIONAL_BITS));
 	// std::cout << "Float constructor called" << std::endl;
 }
 
@@ -49,7 +49,7 @@ float	Fixed::toFloat (void) const {
 }
 
 int	Fixed::toInt (void) const {
-	return (std::roundf((float)_fp_num_val / (float)(1 << _FRACTIONAL_BITS)));
+	return (roundf((float)_fp_num_val / (float)(1 << _FRACTIONAL_BITS)));
 }
 
 // operator overloads

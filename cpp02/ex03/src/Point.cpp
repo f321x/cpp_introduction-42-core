@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:28:34 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/23 14:11:29 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/23 13:58:46 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,18 @@ Point::~Point () { }
 Point::Point (const Point& other) : _x(other._x), _y(other._y) { }
 
 Point&	Point::operator=(const Point& other) {
+	if (this != &other)
+	{
+		std::cout << "can't copy const values" << std::endl;
+		return (*this);
+	}
 	return (*this);
 }
 
-const Fixed&	Point::get_x(void) {
+const Fixed&	Point::get_x(void) const {
 	return (_x);
 }
 
-const Fixed&	Point::get_y(void) {
+const Fixed&	Point::get_y(void) const {
 	return (_y);
 }
