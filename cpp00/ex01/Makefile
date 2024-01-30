@@ -6,12 +6,12 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 12:59:44 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2023/12/13 19:58:02 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/01/30 12:51:41 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
-CFLAGS := -Wall -Wextra -Werror -std=c++98
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -g3
 NAME :=	phonebook1998
 INCLUDES := -I./include
 SRCS := src/main.cpp src/PhoneBook.cpp
