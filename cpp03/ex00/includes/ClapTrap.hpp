@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:06:20 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/31 17:37:17 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/31 18:12:12 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 class ClapTrap {
 
 	public:
+		ClapTrap(void);
 		ClapTrap(std::string name);
 		~ClapTrap();
 		ClapTrap(const ClapTrap& other);  // copy constructor

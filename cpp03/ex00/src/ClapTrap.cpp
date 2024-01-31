@@ -6,11 +6,16 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:06:12 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/01/31 17:34:40 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/01/31 18:12:14 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap (void) {
+	_name = "Karen";
+	std::cout << "Default constructor called! Summoning Karen..." << std::endl;
+}
 
 ClapTrap::ClapTrap (std::string name) : _name(name) {
 	_hitPoints = 10;
@@ -42,16 +47,60 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 }
 
 void	ClapTrap::attack (const std::string& target) {
-	std::cout << "ClapTrap " << _name << " attacks "
-	<< target << " , causing " << _attackDamage << " points of damage!" << std::endl;
+	if (_energyPoints > 0 && _hitPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " attacks "
+		<< target << " , causing " << _attackDamage << " points of damage!" << std::endl;
+		_energyPoints--;
+	}
+	else if (_hitPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " can't attack " << target
+		<< " energy points are empty." << std::endl;
+	}
+	else if (_energyPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " can't attack " << target
+		<< " hit points are empty." << std::endl;
+	}
+	else
+	{
+		std::cout << "ClapTrap " << _name << " can't attack " << target
+		<< " energy and hit points are empty." << std::endl;
+	}
 }
 
 void	ClapTrap::takeDamage (unsigned int amount) {
 	std::cout << "ClapTrap " << _name << " is taking "
 	<<  amount << " points of damage!" << std::endl;
+	_hitPoints -= amount;
+	if (_hitPoints < 0)
+	{
+		_hitPoints = 0;
+		std::cout << "ClapTrap " << _name << " is dead, hit points are empty!" << std::endl;
+	}
 }
 
 void	ClapTrap::beRepaired (unsigned int amount) {
-	std::cout << "ClapTrap " << _name << " is being repaired, "
-	<< amount << " points habe been restored!" << std::endl;
+	if (_energyPoints > 0 && _hitPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " is being repaired, "
+		<< amount << " hit points habe been restored!" << std::endl;
+		_energyPoints--;
+	}
+	else if (_hitPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		<< "energy points are empty!" << std::endl;
+	}
+	else if (_energyPoints > 0)
+	{
+		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		<< "hit points are empty!" << std::endl;
+	}
+	else
+	{
+		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		<< "hit and energy points are empty!" << std::endl;
+	}
 }
