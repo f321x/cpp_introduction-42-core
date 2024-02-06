@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 17:05:57 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/01 16:07:00 by fbock            ###   ########.fr       */
+/*   Created: 2024/02/06 19:57:48 by fbock             #+#    #+#             */
+/*   Updated: 2024/02/06 20:06:57 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#pragma once
 
-int main(void) {
-	ClapTrap	bob("Bob");
-	ClapTrap	alice("Alice");
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-	bob.attack("Alice");
-	alice.takeDamage(0);
-	alice.beRepaired(0);
+class DiamondTrap : public ScavTrap, public FragTrap {
+	public:
+		DiamondTrap(void);
+		DiamondTrap(std::string name);
+		~DiamondTrap();
+		DiamondTrap(const DiamondTrap& other);  // copy constructor
+		DiamondTrap&	operator=(const DiamondTrap& other);  // copy assignment operator overload
 
-	alice.attack("Bob");
-	bob.takeDamage(10);
-
-	return (0);
-}
+	private:
+		std::string _name;
+};

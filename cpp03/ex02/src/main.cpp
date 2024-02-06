@@ -6,11 +6,12 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:05:57 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/01 16:07:00 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/06 19:21:32 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void) {
 	ClapTrap	bob("Bob");
@@ -22,6 +23,13 @@ int main(void) {
 
 	alice.attack("Bob");
 	bob.takeDamage(10);
+
+	std::cout << "Frag Tests\n\n" << std::endl;
+	FragTrap BigF("Big F");
+
+	BigF.highFivesGuys();
+	BigF.takeDamage(1000);
+
 
 	return (0);
 }

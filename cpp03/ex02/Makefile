@@ -6,15 +6,15 @@
 #    By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 17:38:38 by fbock             #+#    #+#              #
-#    Updated: 2024/02/06 20:14:17 by fbock            ###   ########.fr        #
+#    Updated: 2024/02/06 20:14:08 by fbock            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow
-NAME :=	trapClap
+NAME :=	FragClap
 INCLUDES := -I./includes
-SRCS := src/main.cpp src/ClapTrap.cpp
+SRCS := src/main.cpp src/ClapTrap.cpp src/FragTrap.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
