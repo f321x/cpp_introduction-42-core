@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:06:12 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/01 16:34:21 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/06 18:41:37 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap (std::string name) : _name(name) {
 }
 
 ClapTrap::~ClapTrap () {
-	std::cout << "Destructor called!" << std::endl;
+	std::cout << "ClapTrap Destructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap (const ClapTrap& other) {
@@ -71,36 +71,36 @@ void	ClapTrap::attack (const std::string& target) {
 }
 
 void	ClapTrap::takeDamage (unsigned int amount) {
-	std::cout << "ClapTrap " << _name << " is taking "
+	std::cout << _name << " is taking "
 	<<  amount << " points of damage!" << std::endl;
 	_hitPoints -= amount;
 	if (_hitPoints < 0)
 	{
 		_hitPoints = 0;
-		std::cout << "ClapTrap " << _name << " is dead, hit points are empty!" << std::endl;
+		std::cout << _name << " is dead, hit points are empty!" << std::endl;
 	}
 }
 
 void	ClapTrap::beRepaired (unsigned int amount) {
 	if (_energyPoints > 0 && _hitPoints > 0)
 	{
-		std::cout << "ClapTrap " << _name << " is being repaired, "
+		std::cout << _name << " is being repaired, "
 		<< amount << " hit points have been restored!" << std::endl;
 		_energyPoints--;
 	}
 	else if (_hitPoints > 0)
 	{
-		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		std::cout << _name << " cannot be repaired, "
 		<< "energy points are empty!" << std::endl;
 	}
 	else if (_energyPoints > 0)
 	{
-		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		std::cout << _name << " cannot be repaired, "
 		<< "hit points are empty!" << std::endl;
 	}
 	else
 	{
-		std::cout << "ClapTrap " << _name << " cannot be repaired, "
+		std::cout << _name << " cannot be repaired, "
 		<< "hit and energy points are empty!" << std::endl;
 	}
 }

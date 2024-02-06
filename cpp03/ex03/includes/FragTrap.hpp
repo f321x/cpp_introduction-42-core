@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 17:05:57 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/01 16:07:00 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/02/01 16:36:04 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/02/06 20:05:22 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#include <iostream>
 #include "ClapTrap.hpp"
 
-int main(void) {
-	ClapTrap	bob("Bob");
-	ClapTrap	alice("Alice");
+class FragTrap : virtual public ClapTrap {
+	public:
+		FragTrap(void);
+		FragTrap(std::string name);
+		~FragTrap();
+		FragTrap(const FragTrap& other);  // copy constructor
+		FragTrap&	operator=(const FragTrap& other);  // copy assignment operator overload
 
-	bob.attack("Alice");
-	alice.takeDamage(0);
-	alice.beRepaired(0);
-
-	alice.attack("Bob");
-	bob.takeDamage(10);
-
-	return (0);
-}
+		void	attack(const std::string& target);
+		void	highFivesGuys(void);
+};

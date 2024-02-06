@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 17:05:57 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/01 16:07:00 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/02/01 16:36:04 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/02/06 20:05:27 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#include <iostream>
 #include "ClapTrap.hpp"
 
-int main(void) {
-	ClapTrap	bob("Bob");
-	ClapTrap	alice("Alice");
+class ScavTrap : virtual public ClapTrap {
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap& other);  // copy constructor
+		ScavTrap&	operator=(const ScavTrap& other);  // copy assignment operator overload
 
-	bob.attack("Alice");
-	alice.takeDamage(0);
-	alice.beRepaired(0);
+		void	guardGate();
+		void	attack(const std::string& target);
+	private:
 
-	alice.attack("Bob");
-	bob.takeDamage(10);
 
-	return (0);
-}
+};

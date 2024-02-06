@@ -6,15 +6,15 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 17:38:38 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/02/06 20:14:17 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/02/06 20:14:12 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow
-NAME :=	trapClap
+NAME :=	ScavClapTrap
 INCLUDES := -I./includes
-SRCS := src/main.cpp src/ClapTrap.cpp
+SRCS := src/main.cpp src/ClapTrap.cpp src/ScavTrap.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
