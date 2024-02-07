@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 19:57:48 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/06 20:06:57 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/07 10:58:23 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		~DiamondTrap();
 		DiamondTrap(const DiamondTrap& other);  // copy constructor
 		DiamondTrap&	operator=(const DiamondTrap& other);  // copy assignment operator overload
+
+		void	attack(const std::string& target);
+		void	whoAmI();
 
 	private:
 		std::string _name;
