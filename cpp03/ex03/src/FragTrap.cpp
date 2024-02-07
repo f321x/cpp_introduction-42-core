@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 16:36:12 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/06 19:22:19 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/07 10:59:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 FragTrap::FragTrap (void) {
 	_name = "Frank";
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
 	std::cout << "Default ScavTrap constructor called! Summoning Frank..." << std::endl;
 }
 
@@ -29,7 +32,7 @@ FragTrap::~FragTrap() {
 	std::cout << "FragTrap Destructor called! Pouring one out for " << _name << std::endl;
 }
 
-FragTrap::FragTrap (const FragTrap& other) {
+FragTrap::FragTrap (const FragTrap& other) : ClapTrap(other) {
 	_name = other._name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
@@ -39,10 +42,12 @@ FragTrap::FragTrap (const FragTrap& other) {
 
 FragTrap& FragTrap::operator=(const FragTrap& other) {
 	if (this != &other)
+	{
 		_name = other._name;
 		_hitPoints = other._hitPoints;
 		_attackDamage = other._attackDamage;
 		_energyPoints = other._energyPoints;
+	}
 	std::cout << "FragTrap copy assignment operator called" << std::endl;
 	return (*this);
 }

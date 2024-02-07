@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 16:36:12 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/06 18:42:31 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/07 11:00:08 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 ScavTrap::ScavTrap (void) {
 	_name = "Frank";
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << "Default ScavTrap constructor called! Summoning Frank..." << std::endl;
 }
 
@@ -29,7 +32,7 @@ ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap Destructor called! Eliminating " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap (const ScavTrap& other) {
+ScavTrap::ScavTrap (const ScavTrap& other) : ClapTrap(other) {
 	_name = other._name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
@@ -39,10 +42,12 @@ ScavTrap::ScavTrap (const ScavTrap& other) {
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
 	if (this != &other)
+	{
 		_name = other._name;
 		_hitPoints = other._hitPoints;
 		_attackDamage = other._attackDamage;
 		_energyPoints = other._energyPoints;
+	}
 	std::cout << "ScavTrap copy assignment operator called" << std::endl;
 	return (*this);
 }

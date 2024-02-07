@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:06:12 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/06 18:41:37 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/07 11:23:13 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap (void) {
-	_name = "Karen";
-	std::cout << "Default constructor called! Summoning Karen..." << std::endl;
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
+	_name = "";
+	std::cout << "Default ClapTrap constructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap (std::string name) : _name(name) {
@@ -38,10 +41,12 @@ ClapTrap::ClapTrap (const ClapTrap& other) {
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 	if (this != &other)
+	{
 		_name = other._name;
 		_hitPoints = other._hitPoints;
 		_energyPoints = other._energyPoints;
 		_attackDamage = other._attackDamage;
+	}
 	std::cout << "Copy assignment operator called" << std::endl;
 	return (*this);
 }
