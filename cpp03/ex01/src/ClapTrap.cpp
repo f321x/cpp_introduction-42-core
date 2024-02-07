@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:06:12 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/06 18:41:37 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/07 10:53:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 ClapTrap::ClapTrap (void) {
 	_name = "Karen";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "Default constructor called! Summoning Karen..." << std::endl;
 }
 
@@ -38,10 +41,12 @@ ClapTrap::ClapTrap (const ClapTrap& other) {
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 	if (this != &other)
+	{
 		_name = other._name;
 		_hitPoints = other._hitPoints;
 		_energyPoints = other._energyPoints;
 		_attackDamage = other._attackDamage;
+	}
 	std::cout << "Copy assignment operator called" << std::endl;
 	return (*this);
 }
