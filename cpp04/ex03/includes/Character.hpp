@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 11:55:14 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:50:22 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/02/08 13:46:58 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/02/08 14:54:16 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
 #include "ICharacter.hpp"
+#include <string>
+#include <iostream>
 
-class AMateria
-{
+class Character : public ICharacter {
 	public:
-		AMateria(void);
-		virtual ~AMateria();
-		AMateria(const AMateria& other);
-		AMateria& operator=(const AMateria& other);
-		AMateria(std::string const & type);
+		Character(std::string const & name);
+		virtual ~Character();
+		Character(const Character& other);
+		Character& operator=(const Character& other);
 
-		std::string const & getType() const;
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target);
-	protected:
-		std::string	_type;
+		virtual std::string const & getName() const;
+    	virtual void equip(AMateria* m);
+    	virtual void unequip(int idx);
+		virtual void use(int idx, ICharacter& target);
+
+	private:
+		std::string _name;
+		AMateria* _inventory[4];
+
 };

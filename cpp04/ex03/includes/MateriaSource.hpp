@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 11:55:14 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:50:22 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/02/08 13:51:47 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/02/08 14:36:36 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
+#include "AMateria.hpp"
 
-class AMateria
-{
+class MateriaSource : public IMateriaSource {
 	public:
-		AMateria(void);
-		virtual ~AMateria();
-		AMateria(const AMateria& other);
-		AMateria& operator=(const AMateria& other);
-		AMateria(std::string const & type);
+		MateriaSource();
+		virtual ~MateriaSource();
+		MateriaSource(const MateriaSource& other);
+		MateriaSource& operator=(const MateriaSource& other);
 
-		std::string const & getType() const;
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target);
-	protected:
-		std::string	_type;
+		virtual void		learnMateria(AMateria*);
+		virtual AMateria*	createMateria(std::string const & type);
+
+	private:
+		AMateria*	_source[4];
 };

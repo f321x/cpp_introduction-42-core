@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:56:07 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 12:30:09 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 14:53:25 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ AMateria::AMateria(std::string const & type) : _type(type) {
 }
 
 AMateria::AMateria(void) {
-
 	std::cout << "AMateria constructor called." << std::endl;
 }
 
@@ -25,15 +24,15 @@ AMateria::~AMateria() {
 	std::cout << "AMateria destructor called." << std::endl;
 }
 
-AMateria::AMateria(const AMateria& other) {
-
+AMateria::AMateria(const AMateria& other) : _type(other._type) {
 	std::cout << "AMateria copy constructor called." << std::endl;
 }
 
 AMateria& AMateria::operator=(const AMateria& other) {
-	if (this != &other)
-	{
-		//
-	}
+    if (this != &other)
+    {
+        _type = other._type;
+    }
 	std::cout << "AMateria copy assignement overload called." << std::endl;
+	return *this;
 }
