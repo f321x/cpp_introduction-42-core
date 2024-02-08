@@ -6,7 +6,7 @@
 /*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:33:54 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 16:57:14 by codespace        ###   ########.fr       */
+/*   Updated: 2024/02/08 17:16:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Brain {
 		Brain&	operator=(const Brain& other);
 
 		void setBrain(int index, std::string idea);
-		void getBrain(int index, std::string idea);
+		void getBrain(int index);
 	private:
 		std::string _ideas[100];
 };

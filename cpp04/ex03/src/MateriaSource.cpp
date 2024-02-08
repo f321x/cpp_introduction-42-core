@@ -6,7 +6,7 @@
 /*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:52:30 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 16:37:44 by codespace        ###   ########.fr       */
+/*   Updated: 2024/02/08 17:45:30 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,7 @@ void MateriaSource::learnMateria(AMateria* m)
     }
 }
 
-AMateria* MateriaSource::createMateria(std::string const & type)
-{
+AMateria* MateriaSource::createMateria(std::string const & type) {
     for (int i = 0; i < 4; i++)
     {
         if (_source[i] && _source[i]->getType() == type)

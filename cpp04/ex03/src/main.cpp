@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:08:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 16:48:18 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:46:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,14 @@ int main()
 {
 	IMateriaSource* src = new MateriaSource();
 
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	Ice* new_ice = new Ice();
+	Cure* new_cure = new Cure();
+
+	src->learnMateria(new_ice);
+	src->learnMateria(new_cure);
+
+	delete new_cure;
+	delete new_ice;
 
 	ICharacter* me = new Character("me");
 

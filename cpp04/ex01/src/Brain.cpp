@@ -6,7 +6,7 @@
 /*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:33:41 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 16:57:53 by codespace        ###   ########.fr       */
+/*   Updated: 2024/02/08 17:16:41 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,10 @@ Brain& Brain::operator=(const Brain& other) {
 }
 
 void	Brain::setBrain(int index, std::string idea) {
-
+	_ideas[index] = idea;
 }
+
+void	Brain::getBrain(int index) {
+	std::cout << _ideas[index] << std::endl;
+}
+

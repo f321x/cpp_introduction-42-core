@@ -6,7 +6,7 @@
 /*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:08:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 16:55:59 by codespace        ###   ########.fr       */
+/*   Updated: 2024/02/08 17:19:50 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int main()
         animals[i] = new Cat();
     }
 
-
     for (int i = 0; i < 10; i++) {
         delete animals[i];
     }
@@ -33,7 +32,8 @@ int main()
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	j->makeSound();
+
+    j->makeSound();
 	i->makeSound();
 
 	delete j;
