@@ -6,15 +6,15 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:46:58 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 14:54:16 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:49 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ICharacter.hpp"
 #include <string>
 #include <iostream>
+#include "AMateria.hpp"
 
 class Character : public ICharacter {
 	public:

@@ -6,15 +6,14 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:08:40 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 14:50:40 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:48:18 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
 #include "Character.hpp"
 #include "MateriaSource.hpp"
-#include "Ice.hpp"
 #include "Cure.hpp"
+#include "Ice.hpp"
 
 int main()
 {

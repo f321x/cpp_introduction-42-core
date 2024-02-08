@@ -6,12 +6,14 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:53:10 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 14:49:57 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:58:30 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
 #include <string>
+// #include "AMateria.hpp"
 
 class AMateria;
 

@@ -6,7 +6,7 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:01:09 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 12:36:20 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:25:34 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Ice::Ice (void) : AMateria("ice") {
 }
 
 Ice::~Ice() {
-	std::cout << "Ice destructor called.";
+	std::cout << "Ice destructor called." << std::endl;
 }
 
 Ice::Ice(const Ice& other) : AMateria(other) {

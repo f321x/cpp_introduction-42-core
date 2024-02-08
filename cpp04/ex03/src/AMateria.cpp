@@ -6,7 +6,7 @@
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:56:07 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 14:53:25 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:24:15 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,13 @@ AMateria& AMateria::operator=(const AMateria& other) {
     }
 	std::cout << "AMateria copy assignement overload called." << std::endl;
 	return *this;
+}
+
+void	AMateria::use(ICharacter& target) {
+	std::cout << "Undefined materia used on " << target.getName() << std::endl;
+	return ;
+}
+
+std::string const &	AMateria::getType() const {
+	return (_type);
 }
