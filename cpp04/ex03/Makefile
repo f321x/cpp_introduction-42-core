@@ -6,11 +6,11 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 17:38:38 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/02/08 17:01:54 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/02/08 17:33:16 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC := c++
+CC := clang++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow -g3
 NAME :=	materia
 INCLUDES := -I./includes
