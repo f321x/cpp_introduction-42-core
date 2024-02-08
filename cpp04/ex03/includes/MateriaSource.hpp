@@ -6,16 +6,17 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:51:47 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:36:36 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:54 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "IMateriaSource.hpp"
+#include <string>
 #include "AMateria.hpp"
 
 class MateriaSource : public IMateriaSource {
+
 	public:
 		MateriaSource();
 		virtual ~MateriaSource();

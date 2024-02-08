@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:01:41 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 12:50:24 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:25:38 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Cure::Cure (void) : AMateria("cure") {
 }
 
 Cure::~Cure() {
-	std::cout << "Cure destructor called.";
+	std::cout << "Cure destructor called." << std::endl;
 }
 
 Cure::Cure(const Cure& other) : AMateria(other) {

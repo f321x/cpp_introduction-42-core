@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:56:07 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:53:25 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:24:15 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,13 @@ AMateria& AMateria::operator=(const AMateria& other) {
     }
 	std::cout << "AMateria copy assignement overload called." << std::endl;
 	return *this;
+}
+
+void	AMateria::use(ICharacter& target) {
+	std::cout << "Undefined materia used on " << target.getName() << std::endl;
+	return ;
+}
+
+std::string const &	AMateria::getType() const {
+	return (_type);
 }

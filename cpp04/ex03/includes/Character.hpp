@@ -6,15 +6,15 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:46:58 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:54:16 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:49 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ICharacter.hpp"
 #include <string>
 #include <iostream>
+#include "AMateria.hpp"
 
 class Character : public ICharacter {
 	public:

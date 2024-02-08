@@ -6,14 +6,15 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:51:08 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:43:56 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:58:50 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "AMateria.hpp"
 #include <string>
+
+class AMateria;
 
 class IMateriaSource
 {

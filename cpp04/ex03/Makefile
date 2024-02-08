@@ -6,16 +6,15 @@
 #    By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 17:38:38 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/02/08 14:51:05 by ***REMOVED***            ###   ########.fr        #
+#    Updated: 2024/02/08 17:01:54 by ***REMOVED***            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow -g3
-NAME :=	WeirdStuff
+NAME :=	materia
 INCLUDES := -I./includes
 SRCS := src/main.cpp src/AMateria.cpp src/Character.cpp src/Cure.cpp src/Ice.cpp src/MateriaSource.cpp
-
 OBJS := $(SRCS:.cpp=.o)
 all: $(NAME)
 

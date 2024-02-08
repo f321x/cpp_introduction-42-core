@@ -6,7 +6,7 @@
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:55:14 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 14:50:22 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:44 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
 
 class AMateria
 {
