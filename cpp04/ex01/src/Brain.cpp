@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:33:41 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 10:42:38 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:53 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,8 @@ Brain& Brain::operator=(const Brain& other) {
 	}
 	std::cout << "Brain copy assignment operator called" << std::endl;
 	return (*this);
+}
+
+void	Brain::setBrain(int index, std::string idea) {
+
 }

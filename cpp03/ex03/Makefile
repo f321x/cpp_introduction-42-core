@@ -6,12 +6,12 @@
 #    By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 17:38:38 by ***REMOVED***             #+#    #+#              #
-#    Updated: 2024/02/07 11:00:53 by codespace        ###   ########.fr        #
+#    Updated: 2024/02/08 16:36:38 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
-CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -Wshadow -g3
 NAME :=	DiamondTrap
 INCLUDES := -I./includes
 SRCS := src/main.cpp src/ClapTrap.cpp src/FragTrap.cpp src/ScavTrap.cpp src/DiamondTrap.cpp

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:08:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 11:06:05 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:55:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-// #include "WrongCat.hpp"
 
 int main()
 {
@@ -37,7 +36,7 @@ int main()
 	j->makeSound();
 	i->makeSound();
 
-	delete j;//should not create a leak
+	delete j;
 	delete i;
 
 	return 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:08:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 11:51:49 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:55:31 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 {
 	Animal* animals[10];
 
-    Animal animal;  // test for ex02
+    // Animal animal1;  // test for ex02
 
     for (int i = 0; i < 5; i++) {
         animals[i] = new Dog();
@@ -39,7 +39,7 @@ int main()
 	j->makeSound();
 	i->makeSound();
 
-	delete j;//should not create a leak
+	delete j;
 	delete i;
 
 	return 0;

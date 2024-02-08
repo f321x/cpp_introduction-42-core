@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 19:44:13 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 10:46:09 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:45:50 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::~Cat () {
 	std::cout << "Cat destructor called!" << std::endl;
 }
 
-Cat::Cat (const Cat& other) {
+Cat::Cat (const Cat& other) : Animal(other) {
 	_type = other._type;
 	_brain = new Brain(*other._brain);
 	std::cout << "Cat copy constructor called!" << std::endl;

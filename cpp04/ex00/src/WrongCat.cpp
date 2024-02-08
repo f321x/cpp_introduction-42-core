@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
+/*   By: codespace <***REMOVED***@student.***REMOVED***.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 20:11:35 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/07 20:19:27 by ***REMOVED***            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:42:01 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ WrongCat::~WrongCat () {
 	std::cout << "WrongCat destructor called!" << std::endl;
 }
 
-WrongCat::WrongCat (const WrongCat& other) {
+WrongCat::WrongCat (const WrongCat& other) : WrongAnimal(other) {
 	_type = other._type;
 	std::cout << "WrongCat copy constructor called!" << std::endl;
 }
