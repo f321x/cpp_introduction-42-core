@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ***REMOVED*** <***REMOVED***@student.***REMOVED***.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 19:48:40 by ***REMOVED***             #+#    #+#             */
-/*   Updated: 2024/02/08 10:48:59 by ***REMOVED***            ###   ########.fr       */
+/*   Created: 2024/02/08 12:01:21 by ***REMOVED***             #+#    #+#             */
+/*   Updated: 2024/02/08 12:15:38 by ***REMOVED***            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-class Dog : public Animal {
-
+class Cure : public AMateria {
 	public:
-		Dog(void);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
+		Cure(void);
+		~Cure();
+		Cure(const Cure& other);
+		Cure& operator=(const Cure& other);
 
-		void	makeSound() const;
+	private:
+
 };
