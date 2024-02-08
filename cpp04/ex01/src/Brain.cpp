@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:33:41 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:42:38 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:57:53 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,8 @@ Brain& Brain::operator=(const Brain& other) {
 	}
 	std::cout << "Brain copy assignment operator called" << std::endl;
 	return (*this);
+}
+
+void	Brain::setBrain(int index, std::string idea) {
+
 }

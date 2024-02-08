@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:48:12 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 17:00:06 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:37:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 Character::Character(std::string const & name) : _name(name)
 {
     for (int i = 0; i < 4; i++)
+    {
         _inventory[i] = NULL;
-	std::cout << "Character constructor called." << std::endl;
+    }
+    std::cout << "Character constructor called." << std::endl;
 }
 
 Character::Character(Character const & other) : _name(other._name)
@@ -34,8 +36,10 @@ Character::Character(Character const & other) : _name(other._name)
 Character::~Character()
 {
     for (int i = 0; i < 4; i++)
+    {
         delete _inventory[i];
-	std::cout << "Character destructor called." << std::endl;
+    }
+    std::cout << "Character destructor called." << std::endl;
 }
 
 Character & Character::operator=(Character const & other)

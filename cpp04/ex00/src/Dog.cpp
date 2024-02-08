@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:06:25 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:49:14 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:41:07 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Dog::~Dog () {
 	std::cout << "Dog destructor called!" << std::endl;
 }
 
-Dog::Dog (const Dog& other) {
+Dog::Dog (const Dog& other) : Animal(other) {
 	_type = other._type;
 	std::cout << "Dog copy constructor called!" << std::endl;
 }

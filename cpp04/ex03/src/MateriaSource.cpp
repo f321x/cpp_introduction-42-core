@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: codespace <fbock@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:52:30 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 14:41:03 by fbock            ###   ########.fr       */
+/*   Updated: 2024/02/08 16:37:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; i++)
+    {
         _source[i] = NULL;
-	std::cout << "MateriaSource constructor called." << std::endl;
+    }
+    std::cout << "MateriaSource constructor called." << std::endl;
 }
 
 MateriaSource::~MateriaSource()
 {
     for (int i = 0; i < 4; i++)
+    {
         delete _source[i];
-
+    }
 	std::cout << "MateriaSource destructor called." << std::endl;
 }
 
