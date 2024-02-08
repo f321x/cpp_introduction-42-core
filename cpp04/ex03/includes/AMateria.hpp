@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 19:48:40 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:48:59 by fbock            ###   ########.fr       */
+/*   Created: 2024/02/08 11:55:14 by fbock             #+#    #+#             */
+/*   Updated: 2024/02/08 12:18:39 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Dog : public Animal {
-
+class AMateria
+{
 	public:
-		Dog(void);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
+		AMateria(void);
+		virtual ~AMateria();
+		AMateria(const AMateria& other);
+		AMateria& operator=(const AMateria& other);
 
-		void	makeSound() const;
+		AMateria(std::string const & type);
+		// [...]
+
+		std::string const & getType() const; //Returns the materia type
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
+
+	protected:
+		std::string	_type;
 };

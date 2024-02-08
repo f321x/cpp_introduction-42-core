@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 19:48:40 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:48:59 by fbock            ###   ########.fr       */
+/*   Created: 2024/02/07 15:08:40 by fbock             #+#    #+#             */
+/*   Updated: 2024/02/08 11:54:30 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 
-#include "Animal.hpp"
 
-class Dog : public Animal {
+int main()
+{
 
-	public:
-		Dog(void);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
 
-		void	makeSound() const;
-};
+	return 0;
+}

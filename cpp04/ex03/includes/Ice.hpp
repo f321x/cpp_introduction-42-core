@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 19:48:40 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:48:59 by fbock            ###   ########.fr       */
+/*   Created: 2024/02/08 12:00:51 by fbock             #+#    #+#             */
+/*   Updated: 2024/02/08 12:32:32 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-class Dog : public Animal {
+class Ice : public AMateria {
 
 	public:
-		Dog(void);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
+		Ice(void);
+		virtual ~Ice();
+		Ice(const Ice& other);
+		Ice& operator=(const Ice& other);
 
-		void	makeSound() const;
+		virtual Ice* clone() const;
+    	virtual void use(ICharacter& target);
+
+	private:
+
 };

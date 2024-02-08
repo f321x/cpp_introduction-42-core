@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbock <fbock@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 19:48:40 by fbock             #+#    #+#             */
-/*   Updated: 2024/02/08 10:48:59 by fbock            ###   ########.fr       */
+/*   Created: 2024/02/07 15:05:47 by fbock             #+#    #+#             */
+/*   Updated: 2024/02/08 10:41:24 by fbock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Dog : public Animal {
+class Cat : public Animal {
 
 	public:
-		Dog(void);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
+		Cat(void);
+		~Cat();
+		Cat(const Cat& other);
+		Cat&	operator=(const Cat& other);
 
 		void	makeSound() const;
+	private:
+		Brain*	_brain;
 };
