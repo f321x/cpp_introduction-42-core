@@ -1,0 +1,35 @@
+NAME := templates02
+
+CC := g++
+CFLAGS := -Wall -Wextra -Werror -std=c++98
+INCLUDES := -I./includes
+
+SRC_DIR := srcs
+OBJ_DIR := obj
+
+SRCS := $(wildcard $(SRC_DIR)/*.cpp)
+OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+
+all: $(NAME)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+
+$(OBJ_DIR):
+	mkdir -p $@
+
+run: all
+	./$(NAME)
+
+clean:
+	rm -rf $(OBJ_DIR)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: clean fclean all re run
